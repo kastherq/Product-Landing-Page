@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Noto+Sans+Avestan&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff1ee;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/************************************************Barra de navegación**********************************************/
+
+header{
+    color: #292a2b;
+    font-family: 'Noto Sans Avestan', sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0rem 1.5rem;
+}
+
+.logo img{
+    width:15.625rem;
+}
+
+.menu-list li{
+    list-style: none;
+    display: inline-block;
+    margin-top: 4rem;
+    margin-right: 3rem;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.bag-icon img{
+    width: 3.125rem;
+    height: 3.125rem;
+    padding: 0.625rem;
+    margin-top: 3rem;
+    margin-right: 4rem;
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+    color: #292a2b;
+}
+
+.menu-list li:hover{
+    border-bottom: 2px solid #292a2b;
+}
+
+.bag-icon img:hover{
+    border: 2px solid #292a2b;
+}
+
+.c1{
+    flex-grow: 60;
+}
+
+.c2{
+    flex-grow: 2;
+}
+
+/*****************************+Barra de navegación responsive********************************/
+
+@media (max-width: 890px) {
+    .menu-list li{
+        margin-right: 2rem;
+    }    
+}
+
+@media (max-width: 826px) {
+    .menu-list li{
+        margin-right: 1.5rem;
+    }    
+}
+
+@media (max-width: 794px){
+    header{
+        color: #292a2b;
+        font-family: 'Noto Sans Avestan', sans-serif;
+        display: grid;
+        margin: auto;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .logo img{
+        display: block;
+        width:15.625rem;
+        margin: auto;
+    }
+
+    .menu-list li{
+        list-style: none;
+        display: inline-block;
+        width:100%;
+        margin: auto;
+        margin-top: 4rem;
+        font-weight: bolder;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .bag-icon img{
+        width: 3.125rem;
+        height: 3.125rem;
+        padding: 0.625rem;
+        margin: auto;
+        margin-top: 2rem;
+        display: grid;
+        background-color: white;
+    }
+}
+
+/********************************************Sección 1********************************************************+*/
+
+
+.seccion1{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 'titulo titulo imagen'
+                        'texto texto imagen'
+                        'boton boton imagen'
+    ;
+    grid-template-rows: 50% 20% 20%;
+    grid-template-columns: 30% 30% 40%;
+  
+}
+
+.titulo1{
+    font-family: 'Merriweather', serif;
+    margin-top: 20%;
+    margin-left: 6rem;
+    width: 50rem;
+    height: 25rem;
+    font-size: 2.5rem;
+    color: #292a2b;
+}
+
+.texto1{
+    margin-top: 1rem;
+    font-family: 'Noto Sans Avestan', sans-serif;
+    margin-left: 6rem;
+    width: 38rem;
+    font-size: 1.5rem;
+    color: #6d6765;
+}
+
+.imagen1{
+    background-image: url(img/botanical-coffee-1.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    margin-top: 2rem;
+}
+
+.boton1 {
+    margin-left: 6rem;
+    width: 38rem;
+}
+
+.boton1 button{
+    font-family: 'Noto Sans Avestan', sans-serif;
+    margin: 0.313rem;
+    width: 150px;
+    height: 50px;
+    background-color: #0e927d;
+    color: white;
+    padding-top: 0;
+}
+
+.seccion1-1{
+    grid-area: titulo;
+}
+
+.seccion1-2{
+    grid-area: imagen;
+}
+
+.seccion1-3{
+    grid-area: texto;
+}
+
+.seccion1-4{
+    grid-area: boton;
+}
+
+/****************Sección 1 Responsive*********/
+
+@media (max-width: 1168px){
+    .seccion1{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        display: grid;
+        grid-template-areas: 'titulo'
+                            'imagen'
+                            'texto'
+                            'boton';
+        grid-template-rows: 25% 70% 10% 5%;
+        grid-template-columns: 100%;
+    }
+    
+    .titulo1{
+        font-family: 'Merriweather', serif;
+        margin-top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 2.5rem;
+        color: #292a2b;
+        margin-left: 0;
+    }
+
+    .imagen1{
+        margin-top: 0;
+        background-image: url(img/botanical-coffee-1.png);
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .texto1{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Noto Sans Avestan', sans-serif;
+        font-size: 24px;
+    }
+    
+    .boton1 {
+        margin-left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .boton1 button{
+        font-family: 'Noto Sans Avestan', sans-serif;
+        margin: 0.313rem;
+        width: 150px;
+        height: 50px;
+        background-color: #0e927d;
+        color: white;
+        padding-top: 0;
+    }
+    
+    .seccion1-1{
+        grid-area: titulo;
+    }
+    
+    .seccion1-2{
+        grid-area: imagen;
+    }
+    
+    .seccion1-3{
+        grid-area: texto;
+    }
+    
+    .seccion1-4{
+        grid-area: boton;
+    }
+}
+
+@media (max-width: 658px){
+    .seccion1{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: grid;
+        grid-template-areas: 'titulo'
+                            'imagen'
+                            'texto'
+                            'boton';
+        grid-template-rows: 25% 70% 10% 5%;
+        grid-template-columns: 100%;
+        background-color: red;
+    }
+    
+    .titulo1{
+        font-family: 'Merriweather', serif;
+        margin-top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 2.5rem;
+        color: #292a2b;
+        margin-left: 0;
+        background-color: yellow;
+    }
+
+    .imagen1{
+        margin-top: 0;
+        background-image: url(img/botanical-coffee-1.png);
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-position: center;
+        background-color: #6d6765;
+        height: 100%;
+        width: 100%;
+    }
+
+    .texto1{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Noto Sans Avestan', sans-serif;
+        font-size: 24px;
+        color: #6d6765;
+        background-color: blue;
+    }
+    
+    .boton1 {
+        margin-left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: green;
+    }
+    
+    .boton1 button{
+        font-family: 'Noto Sans Avestan', sans-serif;
+        margin: 0.313rem;
+        width: 150px;
+        height: 50px;
+        background-color: #0e927d;
+        color: white;
+        padding-top: 0;
+    }
+    
+    .seccion1-1{
+        grid-area: titulo;
+    }
+    
+    .seccion1-2{
+        grid-area: imagen;
+    }
+    
+    .seccion1-3{
+        grid-area: texto;
+    }
+    
+    .seccion1-4{
+        grid-area: boton;
+    }
+}
